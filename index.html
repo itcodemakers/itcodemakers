@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="import" href="./top_menu/top.html">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="import" href="./static/top_menu/top.html">
 
     <title>[WEB] 코드메이커스</title>
 </head>
 <body>
     <div id="top" style="margin-bottom: 85px;">
-        <div data-include-path="./top_menu/top.html"></div>
+        <div data-include-path="./static/top_menu/top.html"></div>
 
         <script>
             window.addEventListener('load', function() {
@@ -31,23 +31,38 @@
                 });
             });
         </script>
-         <p class="locaiton" style="margin-left: 5px; padding-top: 50px; font-size: 10px;"><img src="/home.png" width="11px;" style="display: block; float: left; padding-top: 2.5px; padding-right: 2px;"><a href="/index.html" style="color: black">Home ></a></p>
+         <p class="location" style="margin-left: 5px; font-size: 10px;"><img src="/home.png" width="11px;" style="display: block; float: left; padding-top: 2.5px; padding-right: 2px;"><a href="/index.html" style="color: black">Home ></a></p>
 
     </div>
 
     <div id="main">
         <span class="Page-title">Web_Production</span>
         <br>
-        <p>교과 내용과 연관된 웹 제작</p>
+
+        <img src="img/main_img.png" width="100%">
+        
+        <span>
+            <a id="main_input">웹페이지 제작 실습</a>
+
+            <p id="main_core">
+                각 조별로 선택한 교과목에 맞는 내용을 조사하고, 이에 대한 내용을 위키로 제작하는 프로젝트를 진행하려고 합니다.<br>
+                아래의 버튼을 눌러 각 조별로 내용을 정리한 페이지로 이동할 수 있으며, 각 조의 위키 페이지는 상단의 nav바를 제외한
+                <br>모든 요소를 각 조원들이 역할에 맞게 제작하였습니다.
+            </p>
+        </span>
 
         <div id="Team_button">
-            <a href="./Team_1/home.html" class="Team_1"><b>[1조]</b><br>지구과학 I</a>
+            <a href="./static/Team_1/home.html" class="Team_1"><b>[1조]</b><br>지구과학 I</a>
 
-            <a href="./Team_2/home.html" class="Team_2"><b>[2조]</b><br>미적분</a>
+            <a href="./static/Team_2/home.html" class="Team_2"><b>[2조]</b><br>미적분</a>
         </div>
         
     </div>
     
+
+    <div id="top" style="width: 100%">
+        <div data-include-path="/footer.html"></div>
+    </div>
 </body>
 </html>
 

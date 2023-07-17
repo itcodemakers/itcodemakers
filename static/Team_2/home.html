@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="import" href="/static/top_menu/top.html">
+
+    <title>[WEB] 코드메이커스</title>
+</head>
+<body>
+    <div id="top" style="margin-bottom: 85px;">
+        <div data-include-path="/static/top_menu/top.html"></div>
+
+        <script>
+            window.addEventListener('load', function() {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function(el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open('GET', includePath, true);
+                        xhttp.send();
+                    }
+                });
+            });
+        </script>
+
+         <p class="location" style="margin-left: 5px; font-size: 10px;"><img src="/home.png" width="11px;" style="display: block; float: left; padding-top: 2.5px; padding-right: 2px;"><a href="/index.html" style="color: black">Home > </a>Team_2</p>
+    </div>
+
+
+    <div id="main">
+        
+    </div>
+    <h1>Team_2---Main Page</h1>
+
+
+    <div id="top" style="width: 100%">
+        <div data-include-path="/footer.html"></div>
+    </div>
+</body>
+</html>
+
+<!--외부 HTML 파일 불러오기 >> 5번 js AJAX 활용 https://kyung-a.tistory.com/18-->
